@@ -43,6 +43,10 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+<<<<<<< Updated upstream
+=======
+activation_time = 5
+>>>>>>> Stashed changes
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
