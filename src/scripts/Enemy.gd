@@ -45,5 +45,5 @@ func _physics_process(delta):
 
 func _on_PlayerDetector_body_entered(body):
 	if body.name == "Char":
-		#$Music.play()
+		$Die.play()
 		get_tree().reload_current_scene()
