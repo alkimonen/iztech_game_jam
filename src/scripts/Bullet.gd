@@ -1,6 +1,9 @@
 extends Area2D
 
 export(int) var speed
+
+onready var character = get_tree().get_root().get_child(0).get_node("Char")
+
 var direction = -1
 
 """
@@ -15,6 +18,8 @@ func _physics_process(delta):
 
 func _on_Bullet_body_entered(body):
 	if body.name == "Char":
+		if character != null:
+			character._die()
 		$Hit.play()
 		get_tree().reload_current_scene()
 	else:

@@ -83,6 +83,11 @@ func _apply_movement():
 		motion.x = 0
 		motion.y = 0
 	move_and_slide(motion)
+	
+func _die():
+	landed = false
+	is_jumping = false
+	motion = Vector2()
 
 func add_new_location(new_pos):
 	locations.append(new_pos)

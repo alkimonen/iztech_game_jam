@@ -10,7 +10,8 @@
 [node name="LevelTest" type="Node2D"]
 
 [node name="Laser" parent="." instance=ExtResource( 5 )]
-position = Vector2( 112, 80 )
+position = Vector2( 168, 72 )
+rotation = 0.0
 
 [node name="Char" parent="." instance=ExtResource( 3 )]
 position = Vector2( 72, 48 )
