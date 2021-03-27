@@ -4,10 +4,7 @@ export(String, FILE, "*.tscn") var play_scene
 export(String, FILE, "*.tscn") var about_scene
 
 func _on_PlayButton_pressed():
-<<<<<<< Updated upstream
 	$Button.play()
-=======
->>>>>>> Stashed changes
 	get_tree().change_scene(play_scene)
 
 func _on_AboutButton_pressed():

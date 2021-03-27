@@ -2,11 +2,6 @@ extends Line2D
 
 onready var character = get_tree().get_root().get_child(0).get_node("Char")
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
 func _process(_delta):
 	if character != null:
 		if character._is_landed():
