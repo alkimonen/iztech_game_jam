@@ -13,6 +13,7 @@ var max_h
 var motion = Vector2.ZERO
 
 func _ready():
+	$CollisionShape2D.disabled=true
 	match start_point:
 		0:
 			min_h = self.position.y
