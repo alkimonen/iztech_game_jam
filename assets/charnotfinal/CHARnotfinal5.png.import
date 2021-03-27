@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CHARnotfinal6.png-115eb738a60bc017295e1842bd97e590.stex"
+path="res://.import/CHARnotfinal5.png-43067b26ff2aa19440434fb6b64a8079.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CHARnotfinal6.png"
-dest_files=[ "res://.import/CHARnotfinal6.png-115eb738a60bc017295e1842bd97e590.stex" ]
+source_file="res://assets/charnotfinal/CHARnotfinal5.png"
+dest_files=[ "res://.import/CHARnotfinal5.png-43067b26ff2aa19440434fb6b64a8079.stex" ]
 
 [params]
 
