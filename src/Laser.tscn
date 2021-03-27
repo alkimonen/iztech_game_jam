@@ -1,6 +1,10 @@
 [gd_scene load_steps=14 format=2]
 
+<<<<<<< Updated upstream
 [ext_resource path="res://src/Laser.gd" type="Script" id=1]
+=======
+[ext_resource path="res://src/scripts/Laser.gd" type="Script" id=1]
+>>>>>>> Stashed changes
 [ext_resource path="res://assets/laser/laser10.png" type="Texture" id=2]
 [ext_resource path="res://assets/laser/laser3.png" type="Texture" id=3]
 [ext_resource path="res://assets/laser/laser2.png" type="Texture" id=4]

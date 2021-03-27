@@ -4,7 +4,6 @@
 [ext_resource path="res://src/scripts/Menu.gd" type="Script" id=2]
 [ext_resource path="res://assets/fonts/monogram_dynamicfont.tres" type="DynamicFont" id=3]
 
-
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -21,10 +20,10 @@ __meta__ = {
 }
 
 [node name="StartButton" type="Button" parent="."]
-margin_left = 88.0
-margin_top = 80.0
-margin_right = 176.0
-margin_bottom = 100.0
+margin_left = 84.047
+margin_top = 85.7833
+margin_right = 172.047
+margin_bottom = 105.783
 custom_fonts/font = ExtResource( 3 )
 text = "Start Button"
 flat = true
@@ -33,10 +32,10 @@ __meta__ = {
 }
 
 [node name="AboutButton" type="Button" parent="."]
-margin_left = 80.0
-margin_top = 104.0
-margin_right = 177.0
-margin_bottom = 124.0
+margin_left = 79.24
+margin_top = 116.021
+margin_right = 176.24
+margin_bottom = 136.021
 custom_fonts/font = ExtResource( 3 )
 text = "About Button"
 flat = true
