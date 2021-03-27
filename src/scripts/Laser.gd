@@ -22,6 +22,8 @@ func _on_Timer_timeout():
 
 func _on_Laser_body_entered(body):
 	if body.get_name() == "Char":
+		$Laser.play()
+		$Die.play()
 		get_tree().reload_current_scene()
 
 

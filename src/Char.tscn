@@ -1,27 +1,27 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://assets/CHARnotfinal2.png" type="Texture" id=1]
+[ext_resource path="res://assets/charkindafinal/CHAR116.png" type="Texture" id=1]
 [ext_resource path="res://src/scripts/Char.gd" type="Script" id=2]
-[ext_resource path="res://assets/CHARnotfinal3.png" type="Texture" id=3]
-[ext_resource path="res://assets/CHARnotfinal6.png" type="Texture" id=4]
-[ext_resource path="res://assets/CHARnotfinal1.png" type="Texture" id=5]
-[ext_resource path="res://assets/CHARnotfinal4.png" type="Texture" id=6]
-[ext_resource path="res://assets/CHARnotfinal5.png" type="Texture" id=7]
-[ext_resource path="res://assets/CHARnotfinal7.png" type="Texture" id=8]
+[ext_resource path="res://assets/charkindafinal/CHAR117.png" type="Texture" id=3]
+[ext_resource path="res://assets/charkindafinal/CHAR111.png" type="Texture" id=4]
+[ext_resource path="res://assets/charkindafinal/CHAR112.png" type="Texture" id=5]
+[ext_resource path="res://assets/charkindafinal/CHAR113.png" type="Texture" id=6]
+[ext_resource path="res://assets/charkindafinal/CHAR115.png" type="Texture" id=7]
+[ext_resource path="res://assets/charkindafinal/CHAR114.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": false,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "jump",
 "speed": 24.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 4 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 1 ), ExtResource( 3 ) ],
 "loop": false,
 "name": "land",
 "speed": 24.0
@@ -29,11 +29,8 @@ animations = [ {
 
 [sub_resource type="CircleShape2D" id=2]
 
-[sub_resource type="Gradient" id=4]
-offsets = PoolRealArray( 0 )
-colors = PoolColorArray( 0.756863, 0, 0, 1 )
-
 [node name="Char" type="KinematicBody2D"]
+z_index = 1
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -50,8 +47,4 @@ current = true
 limit_top = 0
 limit_bottom = 0
 drag_margin_v_enabled = true
-
-[node name="Trajectory" type="Line2D" parent="."]
-width = 2.0
-gradient = SubResource( 4 )
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
