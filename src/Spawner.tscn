@@ -21,7 +21,6 @@ animations = [ {
 } ]
 
 [node name="Spawner" type="Area2D"]
-position = Vector2( 143.631, 86.9345 )
 rotation = 1.5708
 script = ExtResource( 1 )
 __meta__ = {
@@ -29,6 +28,7 @@ __meta__ = {
 }
 Bullet = ExtResource( 2 )
 activation_time = 2.0
+direction = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
