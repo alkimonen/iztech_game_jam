@@ -1,30 +1,45 @@
 extends KinematicBody2D
 
+export(int) var height = 140
+export(int, "Top", "Middle", "Bottom") var start_point
+export var moving_down = false
+
 const MAX_SPEED = 80
 const ACCELERATION = 10
 
+var min_h
+var max_h
+
 var motion = Vector2.ZERO
-var direction = false
+
+func _ready():
+	match start_point:
+		0:
+			min_h = self.position.y
+			max_h = min_h + height
+		1:
+			min_h = self.position.y - height / 2
+			max_h = min_h + height
+		2:
+			max_h = self.position.y
+			min_h = max_h - height
 
 func _physics_process(delta):
-	
-	if direction:
+	if moving_down:
 		motion.y = min(motion.y + ACCELERATION, MAX_SPEED)
-		print(1)
 	else:
 		motion.y = max(motion.y - ACCELERATION, -MAX_SPEED)
-		print(2)
-		
-	if position.y <= 0 or position.y >= 140:
-		if direction :
-			motion.y = -30
+	
+	if position.y < min_h || position.y > max_h:
+		motion.y = 0
+		if position.y < min_h:
+			position.y = min_h
 		else:
-			motion.y = 30
-		$AnimatedSprite.flip_v = direction
-		#$AnimatedSprite.play("run")
-		direction = !direction
+			position.y = max_h
+		moving_down = !moving_down
+		$AnimatedSprite.flip_v = moving_down
 		
-	motion = move_and_slide(motion)
+	move_and_slide(motion)
 
 
 func _on_PlayerDetector_body_entered(body):
