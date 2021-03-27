@@ -12,6 +12,7 @@ const idleDuration = 0.5
 var move_to = Vector2.LEFT * 144
 
 func _ready():
+	$Platform/CollisionShape2D.disabled = true
 	if direction < 0:
 		move_to = Vector2.LEFT * 144
 	else:
@@ -27,5 +28,5 @@ func _init_tween():
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Char":
-		#$Music.play()
+		$Die.play()
 		get_tree().reload_current_scene()
