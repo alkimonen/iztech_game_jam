@@ -63,6 +63,7 @@ func _close_to(next_pos):
 	return false
 
 func _jump():
+	$Jump.play()
 	is_jumping = true
 	landed = false
 	animated_sprite.play("jump")

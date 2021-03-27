@@ -68,5 +68,6 @@ __meta__ = {
 
 [node name="Button" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -20.0
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
