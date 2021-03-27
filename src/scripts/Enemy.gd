@@ -4,6 +4,8 @@ export(int) var height = 140
 export(int, "Top", "Middle", "Bottom") var start_point
 export var moving_down = false
 
+onready var character = get_tree().get_root().get_child(0).get_node("Char")
+
 const MAX_SPEED = 80
 const ACCELERATION = 10
 
@@ -45,5 +47,7 @@ func _physics_process(delta):
 
 func _on_PlayerDetector_body_entered(body):
 	if body.name == "Char":
+		if character != null:
+			character._die()
 		$Die.play()
 		get_tree().reload_current_scene()

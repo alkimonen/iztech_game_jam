@@ -10,7 +10,6 @@ onready var motion = Vector2()
 onready var move_direction = Vector2()
 
 onready var animated_sprite = $AnimatedSprite
-onready var line = $Trajectory
 
 var locations = []
 var loc_index = -1
@@ -45,23 +44,26 @@ func _calculate_direction(index):
 func _turn():
 	self.rotation = move_direction.angle()
 
-func _draw_trajectory():
-	line.show()
-	line.clear_points()
-	var point = Vector2()
-	line.add_point( Vector2(0, 0))
+func _get_trajectory_positions():
+	var res = []
 	if loc_index < locations.size()-1:
-		point.x = locations[loc_index].x - self.position.x
-		point.y = locations[loc_index].y - self.position.y
-		line.add_point(point)
-
+		if loc_index < 0:
+			res.append( self.position)
+		else:
+			res.append( locations[loc_index])
+		res.append( locations[loc_index+1])
+	return res
+	
+func _is_landed():
+	return landed
+	
 func _close_to(next_pos):
 	if abs(next_pos.x - self.position.x) <= CLOSENESS_DISTANCE && abs(next_pos.y - self.position.y) <= CLOSENESS_DISTANCE:
 		return true
 	return false
 
 func _jump():
-	line.hide()
+	$Jump.play()
 	is_jumping = true
 	landed = false
 	animated_sprite.play("jump")
@@ -81,18 +83,21 @@ func _apply_movement():
 		motion.x = 0
 		motion.y = 0
 	move_and_slide(motion)
+	
+func _die():
+	landed = false
+	is_jumping = false
+	motion = Vector2()
 
 func add_new_location(new_pos):
 	locations.append(new_pos)
 	if locations.size() == 1:
 		_calculate_direction(0)
 		_turn()
-		#_draw_trajectory()
 
 func _on_AnimatedSprite_animation_finished():
 	if animated_sprite.get_animation() == "land":
 		animated_sprite.play("idle")
 		_calculate_direction(loc_index+1)
 		_turn()
-		#d_draw_trajectory()
 		landed = true
