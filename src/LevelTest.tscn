@@ -3,7 +3,7 @@
 [ext_resource path="res://src/Map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/JumpLocation.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Char.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Exit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Spawner.tscn" type="PackedScene" id=5]
 
 [node name="LevelTest" type="Node2D"]
@@ -49,10 +49,16 @@ position = Vector2( 608, 56 )
 [node name="JumpLocation11" parent="JumpLocations" instance=ExtResource( 2 )]
 position = Vector2( 704, 120 )
 
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 168, 136 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 200, 64 )
+start_point = 1
+
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 232, 8 )
+height = 100
+
 [node name="Spawner" parent="." instance=ExtResource( 5 )]
 position = Vector2( 152, 24 )
-direction = 0
-
-[node name="Exit" parent="." instance=ExtResource( 4 )]
-position = Vector2( 704, 120 )
-next_scene = "res://src/LevelTest.tscn"
