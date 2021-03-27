@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slimeenemy1.png-6767165d1ff4fb396ab048792ecb9932.stex"
+path="res://.import/projred.png-3424c6a36f92379d023483f385445764.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemy/slimeenemy1.png"
-dest_files=[ "res://.import/slimeenemy1.png-6767165d1ff4fb396ab048792ecb9932.stex" ]
+source_file="res://assets/bulletspawner/projred.png"
+dest_files=[ "res://.import/projred.png-3424c6a36f92379d023483f385445764.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

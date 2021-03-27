@@ -1,6 +1,6 @@
 extends Area2D
 
-export(int) var activation_time
+export(float) var activation_time
 
 onready var character = get_tree().get_root().get_child(0).get_node("Char")
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/scripts/Bullet.gd" type="Script" id=1]
-[ext_resource path="res://assets/spawner/proj.png" type="Texture" id=2]
+[ext_resource path="res://assets/bulletspawner/projred.png" type="Texture" id=2]
 [ext_resource path="res://musics/hit.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]

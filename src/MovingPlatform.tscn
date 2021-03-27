@@ -1,16 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/scripts/MovingPlatform.gd" type="Script" id=1]
 [ext_resource path="res://musics/die.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/platfrom/platform.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 4 )
+extents = Vector2( 16, 0 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 4 )
 
 [node name="MovingPlatform" type="Node2D"]
-position = Vector2( 128, 16 )
 rotation = 1.5708
 script = ExtResource( 1 )
 __meta__ = {
@@ -20,6 +20,9 @@ __meta__ = {
 [node name="Platform" type="KinematicBody2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Platform"]
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
 shape = SubResource( 1 )
