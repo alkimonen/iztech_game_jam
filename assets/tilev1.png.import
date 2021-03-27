@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CHARnotfinal2.png-750751b3cb30bd91bca45ae6f0647a69.stex"
+path="res://.import/tilev1.png-171032f7ff0639dd383af9a865d29337.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CHARnotfinal2.png"
-dest_files=[ "res://.import/CHARnotfinal2.png-750751b3cb30bd91bca45ae6f0647a69.stex" ]
+source_file="res://assets/tilev1.png"
+dest_files=[ "res://.import/tilev1.png-171032f7ff0639dd383af9a865d29337.stex" ]
 
 [params]
 
