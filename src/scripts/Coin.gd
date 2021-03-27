@@ -6,4 +6,7 @@ func _ready():
 func _on_Coin_body_entered(body):
 	if body.name == "Char":
 		$Sound.play()
-		queue_free()
+
+
+func _on_Sound_finished():
+	queue_free()

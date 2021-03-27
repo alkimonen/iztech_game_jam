@@ -41,7 +41,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-activation_time = 1
+activation_time = 1.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
