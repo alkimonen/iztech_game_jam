@@ -12,20 +12,20 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 1 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": false,
-"name": "land",
-"speed": 24.0
+"name": "idle",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "jump",
 "speed": 24.0
 }, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 1 ), ExtResource( 3 ) ],
 "loop": false,
-"name": "idle",
-"speed": 5.0
+"name": "land",
+"speed": 24.0
 } ]
 
 [sub_resource type="CircleShape2D" id=2]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Exit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/JumpLocation.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://src/Laser.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Background.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/fonts/monogram_dynamicfont.tres" type="DynamicFont" id=10]
 
 [node name="Level8" type="Node2D"]
 
@@ -125,3 +126,55 @@ position = Vector2( 1024, 72 )
 rotation = 0.0
 
 [node name="Background" parent="." instance=ExtResource( 9 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = -241.0
+margin_right = -201.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Label"]
+margin_left = 384.0
+margin_top = 16.0
+margin_right = 427.0
+margin_bottom = 59.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = ExtResource( 10 )
+text = "or 8"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Label"]
+margin_left = 400.0
+margin_top = 19.0
+margin_right = 437.0
+margin_bottom = 62.0
+rect_rotation = 90.0
+rect_scale = Vector2( 0.8, 0.75 )
+custom_fonts/font = ExtResource( 10 )
+text = "8"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 1184.0
+margin_top = 16.0
+margin_right = 1248.0
+margin_bottom = 59.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = ExtResource( 10 )
+text = "Yes, that
+is a loop"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

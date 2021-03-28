@@ -35,10 +35,27 @@ margin_left = 376.0
 margin_top = 8.0
 margin_right = 472.0
 margin_bottom = 22.0
+rect_pivot_offset = Vector2( 80, 14 )
 custom_fonts/font = ExtResource( 1 )
 text = "Time your jump!"
 align = 1
 valign = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 908.0
+margin_top = 13.0
+margin_right = 972.0
+margin_bottom = 55.0
+rect_scale = Vector2( 0.75, 0.75 )
+rect_pivot_offset = Vector2( 80, 14 )
+custom_fonts/font = ExtResource( 1 )
+text = "Loop 1
+ends..."
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
