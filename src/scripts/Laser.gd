@@ -17,7 +17,6 @@ func _on_Timer_timeout():
 		active = false
 	else:
 		$AnimatedSprite.play("turnon")
-		
 		$CollisionShape2D.set_disabled( false)
 		active = true
 

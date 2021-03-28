@@ -50,4 +50,7 @@ func _on_PlayerDetector_body_entered(body):
 		if character != null:
 			character._die()
 		$Die.play()
-		get_tree().reload_current_scene()
+
+
+func _on_Die_finished():
+	get_tree().reload_current_scene()

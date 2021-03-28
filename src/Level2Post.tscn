@@ -9,7 +9,7 @@
 [ext_resource path="res://src/Background.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Coin.tscn" type="PackedScene" id=8]
 
-[node name="Level1Post" type="Node2D"]
+[node name="Level2Post" type="Node2D"]
 
 [node name="Char" parent="." instance=ExtResource( 4 )]
 position = Vector2( 88, 72 )

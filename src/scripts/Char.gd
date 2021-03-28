@@ -27,6 +27,8 @@ func _physics_process(delta):
 		if loc_index < locations.size()-1:
 			loc_index += 1
 		_jump()
+	elif Input.is_action_just_pressed("ui_cancel"):
+		get_tree().change_scene("res://src/LevelSelect.tscn")
 		
 	if !landed && _close_to(locations[loc_index]):
 		_land()

@@ -9,6 +9,7 @@ func _on_PlayButton_pressed():
 
 func _on_AboutButton_pressed():
 	$Button.play()
-	get_tree().change_scene(about_scene)
+	OS.shell_open("https://carpetgames.itch.io/")
+	#get_tree().change_scene(about_scene)
 
 

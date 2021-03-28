@@ -2,6 +2,8 @@ extends Node2D
 
 export(int) var direction
 
+onready var character = get_tree().get_root().get_child(0).get_node("Char")
+
 export var speed = 3.0
 
 onready var platform = $Platform
@@ -28,5 +30,10 @@ func _init_tween():
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Char":
+		if character != null:
+			character._die()
 		$Die.play()
-		get_tree().reload_current_scene()
+
+
+func _on_Die_finished():
+	get_tree().reload_current_scene()

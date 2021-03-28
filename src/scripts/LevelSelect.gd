@@ -6,6 +6,9 @@ export(String, FILE, "*.tscn") var level_3
 export(String, FILE, "*.tscn") var level_4
 export(String, FILE, "*.tscn") var level_5
 export(String, FILE, "*.tscn") var level_6
+export(String, FILE, "*.tscn") var level_7
+export(String, FILE, "*.tscn") var level_8
+export(String, FILE, "*.tscn") var home
 
 
 func _on_Level1_pressed():
@@ -36,3 +39,18 @@ func _on_Level5_pressed():
 func _on_Level6_pressed():
 	$Button.play()
 	get_tree().change_scene(level_6)
+
+
+func _on_Level7_pressed():
+	$Button.play()
+	get_tree().change_scene(level_7)
+
+
+func _on_Level8_pressed():
+	$Button.play()
+	get_tree().change_scene(level_8)
+
+
+func _on_BackButton_pressed():
+	$Button.play()
+	get_tree().change_scene(home)

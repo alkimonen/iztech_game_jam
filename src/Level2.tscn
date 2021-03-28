@@ -44,7 +44,7 @@ position = Vector2( 936, 88 )
 
 [node name="Exit" parent="." instance=ExtResource( 1 )]
 position = Vector2( 944, 88 )
-next_scene = "res://src/Level3Post.tscn"
+next_scene = "res://src/Level2Post.tscn"
 
 [node name="Bayrak" parent="." instance=ExtResource( 5 )]
 position = Vector2( 40, 72 )
