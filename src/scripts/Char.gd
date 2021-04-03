@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal landing_finished
+
 const CLOSENESS_DISTANCE = 5
 const MAX_SPEED = 360
 const MIN_SPEED = 180
@@ -29,7 +31,7 @@ func _physics_process(delta):
 		_jump()
 	elif Input.is_action_just_pressed("ui_cancel"):
 		get_tree().change_scene("res://src/LevelSelect.tscn")
-		
+
 	if !landed && _close_to(locations[loc_index]):
 		_land()
 	_apply_movement()
@@ -55,10 +57,10 @@ func _get_trajectory_positions():
 			res.append( locations[loc_index])
 		res.append( locations[loc_index+1])
 	return res
-	
+
 func _is_landed():
 	return landed
-	
+
 func _close_to(next_pos):
 	if abs(next_pos.x - self.position.x) <= CLOSENESS_DISTANCE && abs(next_pos.y - self.position.y) <= CLOSENESS_DISTANCE:
 		return true
@@ -85,7 +87,7 @@ func _apply_movement():
 		motion.x = 0
 		motion.y = 0
 	move_and_slide(motion)
-	
+
 func _die():
 	landed = false
 	is_jumping = false
@@ -103,7 +105,4 @@ func _on_AnimatedSprite_animation_finished():
 		_calculate_direction(loc_index+1)
 		_turn()
 		landed = true
-
-func _get_next_position():
-	if loc_index < locations.size() -2:
-		return locations[loc_index+1]
+		emit_signal("landing_finished")
