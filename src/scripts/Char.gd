@@ -105,4 +105,5 @@ func _on_AnimatedSprite_animation_finished():
 		landed = true
 
 func _get_next_position():
-	return locations[loc_index+1]
+	if loc_index < locations.size() -2:
+		return locations[loc_index+1]
