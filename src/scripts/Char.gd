@@ -103,3 +103,6 @@ func _on_AnimatedSprite_animation_finished():
 		_calculate_direction(loc_index+1)
 		_turn()
 		landed = true
+
+func _get_next_position():
+	return locations[loc_index+1]
