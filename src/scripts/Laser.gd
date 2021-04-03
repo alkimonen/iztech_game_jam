@@ -11,13 +11,37 @@ func _ready():
 	$Timer.start()
 
 func _on_Timer_timeout():
+	var time = 0.2
 	if active:
 		$AnimatedSprite.play("turnoff")
-		$CollisionShape2D.set_disabled( true)
+		$L1.set_disabled( true)
+		$L5.set_disabled( true)
+		yield(get_tree().create_timer(time), "timeout")
+		#_wait(time)
+		$L2.set_disabled( true)
+		$L6.set_disabled( true)
+		yield(get_tree().create_timer(time), "timeout")
+		$L3.set_disabled( true)
+		$L7.set_disabled( true)
+		yield(get_tree().create_timer(time), "timeout")
+		$L4.set_disabled( true)
+		$L8.set_disabled( true)
+		#$CollisionShape2D.set_disabled( true)
 		active = false
 	else:
 		$AnimatedSprite.play("turnon")
-		$CollisionShape2D.set_disabled( false)
+		$L4.set_disabled( false)
+		$L8.set_disabled( false)
+		yield(get_tree().create_timer(time), "timeout")
+		$L3.set_disabled( false)
+		$L7.set_disabled( false)
+		yield(get_tree().create_timer(time), "timeout")
+		$L2.set_disabled( false)
+		$L6.set_disabled( false)
+		yield(get_tree().create_timer(time), "timeout")
+		$L1.set_disabled( false)
+		$L5.set_disabled( false)
+		#$CollisionShape2D.set_disabled( false)
 		active = true
 
 
@@ -39,3 +63,13 @@ func _on_Die_finished():
 
 func _on_Laser_finished():
 	$Die.play()
+
+func _wait(sec):
+	var t = Timer.new()
+	t.set_wait_time(sec)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	t.queue_free()
+
